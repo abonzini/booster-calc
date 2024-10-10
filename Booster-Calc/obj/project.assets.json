@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AugustoBonzini\\Desktop\\VS Tests\\Booster\\Booster.csproj",
+      "projectUniqueName": "C:\\Users\\AugustoBonzini\\Desktop\\VS Tests\\Bcalc-git\\booster-calc\\Booster-Calc\\Booster.csproj",
       "projectName": "Booster",
-      "projectPath": "C:\\Users\\AugustoBonzini\\Desktop\\VS Tests\\Booster\\Booster.csproj",
+      "projectPath": "C:\\Users\\AugustoBonzini\\Desktop\\VS Tests\\Bcalc-git\\booster-calc\\Booster-Calc\\Booster.csproj",
       "packagesPath": "C:\\Users\\AugustoBonzini\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AugustoBonzini\\Desktop\\VS Tests\\Booster\\obj\\",
+      "outputPath": "C:\\Users\\AugustoBonzini\\Desktop\\VS Tests\\Bcalc-git\\booster-calc\\Booster-Calc\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

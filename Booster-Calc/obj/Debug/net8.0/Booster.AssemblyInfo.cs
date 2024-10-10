@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Booster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+539036dda3a71108d2f3c61e306ff16c2b9972a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Booster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Booster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

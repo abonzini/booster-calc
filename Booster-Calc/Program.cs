@@ -173,6 +173,6 @@ using (StreamWriter writetext = new StreamWriter("./output.txt"))
 }
 
 print_string("ENJOY!", ConsoleColor.Green, ConsoleColor.Black);
-Console.WriteLine("Press any key to close program...");
+Console.WriteLine("Press enter to close program...");
 
-Console.ReadKey();
+Console.ReadLine();

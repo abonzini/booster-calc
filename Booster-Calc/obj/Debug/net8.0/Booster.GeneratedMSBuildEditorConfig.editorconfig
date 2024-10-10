@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Booster
-build_property.ProjectDir = C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\
+build_property.ProjectDir = C:\Users\AugustoBonzini\Desktop\VS Tests\Bcalc-git\booster-calc\Booster-Calc\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
