@@ -1,0 +1,14 @@
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\bin\Debug\net8.0\Booster.exe
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\bin\Debug\net8.0\Booster.deps.json
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\bin\Debug\net8.0\Booster.runtimeconfig.json
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\bin\Debug\net8.0\Booster.dll
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\bin\Debug\net8.0\Booster.pdb
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\Booster.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\Booster.AssemblyInfoInputs.cache
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\Booster.AssemblyInfo.cs
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\Booster.csproj.CoreCompileInputs.cache
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\Booster.dll
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\refint\Booster.dll
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\Booster.pdb
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\Booster.genruntimeconfig.cache
+C:\Users\AugustoBonzini\Desktop\VS Tests\Booster\obj\Debug\net8.0\ref\Booster.dll
