@@ -52,7 +52,12 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
             {
                 new_player.type_counter.Add(starter_types.Item2, STARTER_TYPE_WEIGHT);
             }
-            for(int i = 2; i < fields.Length; i+=2) // Add rest of data as booster packs
+            string starter_species = dex.GetSpecies(starter);
+            if(starter_species != "") // Add species if exists
+            {
+                new_player.species_owned.Add(starter_species); // Also add the species
+            }
+            for (int i = 2; i < fields.Length; i+=2) // Add rest of data as booster packs
             {
                 Tuple<string, int> next_pack = new Tuple<string, int>(fields[i], int.Parse(fields[i+1]));
                 new_player.chosen_packs.Add(next_pack);
@@ -112,6 +117,17 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
                             }
                         }
                     } // If ok, then types are all right
+                    // Check species clause
+                    string booster_mon_species = dex.GetSpecies(pack[booster_next].ToLower());
+                    if(booster_mon_species != "") // If it's a species with multiple forms
+                    {
+                        if(pick_ok && players[player].species_owned.Contains(booster_mon_species)) // If already own the species
+                        {
+                            print_string($"\t\t\t- Species clause violated: {booster_mon_species} species", ConsoleColor.Magenta, ConsoleColor.Black);
+                            logtext.WriteLine($"\t\t\t- Species clause violated: {booster_mon_species} species");
+                            pick_ok = false; // this type exceeded
+                        }
+                    }
                     if(!pick_ok) // This mon won't go
                     {
                         print_string($"\t\t- {pack[booster_next]} discarded", ConsoleColor.Magenta, ConsoleColor.Black);
@@ -134,6 +150,7 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
                             }
                             else players[player].type_counter[booster_mon_types.Item2]++;
                         }
+                        players[player].species_owned.Add(booster_mon_species); // Also add the species
                         obtained_mons++; // Get this mon, defo
                         if(obtained_mons == picks_per_pack)
                         {

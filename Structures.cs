@@ -9,6 +9,7 @@ public class Player
     }
 
     public Dictionary<string, int> type_counter = new Dictionary<string, int>(); // Type counter
+    public HashSet<string> species_owned = new HashSet<string>();
     public List<Tuple<string, int>> chosen_packs = new List<Tuple<string, int>>();
     public List<List<string>> pack_results = new List<List<string>>(); // Contains pack results
 };
@@ -33,18 +34,25 @@ public class MonData
             {
                 index_type2 = i;
             }
+            else if (index.ToLower() == "species")
+            {
+                index_species = i;
+            }
             i++;
         }
-        if (index_name == -1 || index_type1 == -1 || index_type2 == -1)
+        if (index_name == -1 || index_type1 == -1 || index_type2 == -1 || index_species == -1)
         {
-            throw new Exception("Dex doesn't contain pokemon and/or type 1 and/or type 2 indices!");
+            throw new Exception("Dex doesn't contain pokemon and/or type 1 and/or type 2 and/or species indices!");
         }
     }
     int index_name = -1;
     int index_type1 = -1, index_type2 = -1;
+    int index_species = -1;
     string[] dex_file;
     // Dictionary that contains types
     Dictionary<string, Tuple<string, string>> Types = new Dictionary<string, Tuple<string, string>>();
+    // Dictionary that contains species
+    Dictionary<string, string> Species = new Dictionary<string, string>();
 
     public Tuple<string, string> GetTypes(string mon) // Check types of mon (stores it for later use)
     {
@@ -72,6 +80,28 @@ public class MonData
         }
         result = Types[mon];
         return result;
+    }
+    public string GetSpecies(string mon)
+    {
+        mon = mon.ToLower();
+        if (!Species.ContainsKey(mon)) // if mon not parsed, parse it
+        {
+            foreach (string mon_data in dex_file)
+            {
+                string[] indices = mon_data.Split(",");
+                if (mon == indices[index_name].ToLower())
+                {
+                    string species = indices[index_species].ToLower();
+                    Species.Add(mon, species);
+                    break;
+                }
+            }
+        }
+        if (!Species.ContainsKey(mon))
+        {
+            throw new Exception($"Dex doesn't contain data for {mon}");
+        }
+        return Species[mon];
     }
 }
 public class PackPools
@@ -132,6 +162,7 @@ public class PackPools
         {
             foreach (string mon in pack.Item2)
             {
+                dex.GetSpecies(mon);
                 Tuple<string, string> these_types = dex.GetTypes(mon); // This runs and verifies grammar
                 if (!types.Contains(these_types.Item1))
                 {
