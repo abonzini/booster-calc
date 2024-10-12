@@ -59,6 +59,10 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
             }
             for (int i = 2; i < fields.Length; i+=2) // Add rest of data as booster packs
             {
+                if(fields[i] == "")
+                {
+                    continue;
+                }
                 Tuple<string, int> next_pack = new Tuple<string, int>(fields[i], int.Parse(fields[i+1]));
                 new_player.chosen_packs.Add(next_pack);
             }
