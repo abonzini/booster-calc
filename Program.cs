@@ -57,6 +57,7 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
                 Tuple<string, int> next_pack = new Tuple<string, int>(fields[i], int.Parse(fields[i+1]));
                 new_player.chosen_packs.Add(next_pack);
             }
+            packs.RemoveMon(starter); // This mon will be unavailable in packs
             players.Add(new_player);
         }
         Console.WriteLine("\t- All players loaded");
