@@ -8,6 +8,7 @@ public class Player
         name = player_name;
     }
 
+    public int ongoing_pack = 0;
     public Dictionary<string, int> type_counter = new Dictionary<string, int>(); // Type counter
     public HashSet<string> species_owned = new HashSet<string>();
     public List<Tuple<string, int>> chosen_packs = new List<Tuple<string, int>>();
@@ -152,7 +153,7 @@ public class PackPools
     {
         foreach (Tuple<string, List<string>> pack in pack_data)
         {
-            pack.Item2.Remove(mon);
+            pack.Item2.Remove(mon.ToLower());
         }
     }
     public void DebugVerifyPacksMons(MonData dex)
