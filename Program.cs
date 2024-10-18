@@ -12,6 +12,69 @@ void print_string(string str, ConsoleColor fg_color, ConsoleColor bg_color)
     Console.ResetColor();
 }
 
+bool mon_is_valid(Player player, string mon, MonData dex, StreamWriter logtext)
+{
+    Tuple<string, string> booster_mon_types = dex.GetTypes(mon);
+    // Check first type!
+    if (player.type_counter.ContainsKey(booster_mon_types.Item1))
+    {
+        if (player.type_counter[booster_mon_types.Item1] >= MAX_NUMBER_OF_SAME_TYPE)
+        {
+            print_string($"\t\t\t- Type limit exceeded: {booster_mon_types.Item1}", ConsoleColor.Magenta, ConsoleColor.Black);
+            logtext.WriteLine($"\t\t\t- Type limit exceeded: {booster_mon_types.Item1}");
+            return false; // this type exceeded
+        }
+    }
+    // If ok for first type, now check second type!
+    if (booster_mon_types.Item2 != "")
+    {
+        if (player.type_counter.ContainsKey(booster_mon_types.Item2))
+        {
+            if (player.type_counter[booster_mon_types.Item2] >= MAX_NUMBER_OF_SAME_TYPE)
+            {
+                print_string($"\t\t\t- Type limit exceeded: {booster_mon_types.Item2}", ConsoleColor.Magenta, ConsoleColor.Black);
+                logtext.WriteLine($"\t\t\t- Type limit exceeded: {booster_mon_types.Item2}");
+                return false; // this type exceeded
+            }
+        }
+    } // If ok, then types are all right
+    // Check species clause
+    string booster_mon_species = dex.GetSpecies(mon);
+    if (booster_mon_species != "") // If it's a species with multiple forms
+    {
+        if (player.species_owned.Contains(booster_mon_species)) // If already own the species
+        {
+            print_string($"\t\t\t- Species clause violated: {booster_mon_species} species", ConsoleColor.Magenta, ConsoleColor.Black);
+            logtext.WriteLine($"\t\t\t- Species clause violated: {booster_mon_species} species");
+            return false; // this species already owned!
+        }
+    }
+    return true; // Otherwise this was a success
+}
+
+void add_mon(Player player, string mon, MonData dex, int round)
+{
+    Tuple<string, string> booster_mon_types = dex.GetTypes(mon);
+    string booster_mon_species = dex.GetSpecies(mon);
+
+    player.pack_results[round].Add(mon); // Add mon to options
+    if (!player.type_counter.ContainsKey(booster_mon_types.Item1)) // Increase type counter
+    {
+        player.type_counter.Add(booster_mon_types.Item1, 1);
+    }
+    else player.type_counter[booster_mon_types.Item1]++;
+    // If 2nd type, also add
+    if (booster_mon_types.Item2 != "")
+    {
+        if (!player.type_counter.ContainsKey(booster_mon_types.Item2)) // Increase type to counter
+        {
+            player.type_counter.Add(booster_mon_types.Item2, 1);
+        }
+        else player.type_counter[booster_mon_types.Item2]++;
+    }
+    player.species_owned.Add(booster_mon_species); // Also add the species
+}
+
 using (StreamWriter logtext = new StreamWriter("./log.txt"))
 {
     int seed = Guid.NewGuid().GetHashCode();
@@ -116,66 +179,19 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
                 
                 for (int booster_next = 0; booster_next < pack.Count; booster_next++) // Navigate the whole thing
                 {
-                    bool pick_ok = true;
-                    Console.WriteLine($"\t\t- Chosen {pack[booster_next]}");
-                    logtext.WriteLine($"\t\t- Chosen {pack[booster_next]}");
-                    Tuple<string, string> booster_mon_types = dex.GetTypes(pack[booster_next].ToLower());
-                    // Check first type!
-                    if (players[player].type_counter.ContainsKey(booster_mon_types.Item1))
-                    {
-                        if (players[player].type_counter[booster_mon_types.Item1] >= MAX_NUMBER_OF_SAME_TYPE)
-                        {
-                            print_string($"\t\t\t- Type limit exceeded: {booster_mon_types.Item1}", ConsoleColor.Magenta, ConsoleColor.Black);
-                            logtext.WriteLine($"\t\t\t- Type limit exceeded: {booster_mon_types.Item1}");
-                            pick_ok = false; // this type exceeded
-                        }
-                    } // ok for first type, now check second type!
-                    if (booster_mon_types.Item2 != "")
-                    {
-                        if (pick_ok && players[player].type_counter.ContainsKey(booster_mon_types.Item2))
-                        {
-                            if (players[player].type_counter[booster_mon_types.Item2] >= MAX_NUMBER_OF_SAME_TYPE)
-                            {
-                                print_string($"\t\t\t- Type limit exceeded: {booster_mon_types.Item2}", ConsoleColor.Magenta, ConsoleColor.Black);
-                                logtext.WriteLine($"\t\t\t- Type limit exceeded: {booster_mon_types.Item2}");
-                                pick_ok = false; // this type exceeded
-                            }
-                        }
-                    } // If ok, then types are all right
-                        // Check species clause
-                    string booster_mon_species = dex.GetSpecies(pack[booster_next].ToLower());
-                    if (booster_mon_species != "") // If it's a species with multiple forms
-                    {
-                        if (pick_ok && players[player].species_owned.Contains(booster_mon_species)) // If already own the species
-                        {
-                            print_string($"\t\t\t- Species clause violated: {booster_mon_species} species", ConsoleColor.Magenta, ConsoleColor.Black);
-                            logtext.WriteLine($"\t\t\t- Species clause violated: {booster_mon_species} species");
-                            pick_ok = false; // this type exceeded
-                        }
-                    }
+                    string mon_picked = pack[booster_next].ToLower();
+                    Console.WriteLine($"\t\t- Chosen {mon_picked}");
+                    logtext.WriteLine($"\t\t- Chosen {mon_picked}");
+                    bool pick_ok = mon_is_valid(players[player], mon_picked, dex, logtext);
+                    
                     if (!pick_ok) // This mon won't go
                     {
-                        print_string($"\t\t- {pack[booster_next]} discarded", ConsoleColor.Magenta, ConsoleColor.Black);
-                        logtext.WriteLine($"\t\t- {pack[booster_next]} discarded");
+                        print_string($"\t\t- {mon_picked} discarded", ConsoleColor.Magenta, ConsoleColor.Black);
+                        logtext.WriteLine($"\t\t- {mon_picked} discarded");
                     }
                     else
                     {
-                        players[player].pack_results[round].Add(pack[booster_next]); // Add mon to options
-                        if (!players[player].type_counter.ContainsKey(booster_mon_types.Item1)) // Increase type counter
-                        {
-                            players[player].type_counter.Add(booster_mon_types.Item1, 1);
-                        }
-                        else players[player].type_counter[booster_mon_types.Item1]++;
-                        // If 2nd type, also add
-                        if (booster_mon_types.Item2 != "")
-                        {
-                            if (booster_mon_types.Item2 != "" && !players[player].type_counter.ContainsKey(booster_mon_types.Item2)) // Increase type to counter
-                            {
-                                players[player].type_counter.Add(booster_mon_types.Item2, 1);
-                            }
-                            else players[player].type_counter[booster_mon_types.Item2]++;
-                        }
-                        players[player].species_owned.Add(booster_mon_species); // Also add the species
+                        add_mon(players[player], mon_picked, dex, round);
                         obtained_mons++; // Get this mon, defo
                         if (obtained_mons == picks_per_pack)
                         {
