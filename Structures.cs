@@ -13,6 +13,7 @@ public class Player
     public HashSet<string> species_owned = new HashSet<string>();
     public List<Tuple<string, int>> chosen_packs = new List<Tuple<string, int>>();
     public List<List<string>> pack_results = new List<List<string>>(); // Contains pack results
+    public int mega_counter = 0;
 };
 
 public class MonData

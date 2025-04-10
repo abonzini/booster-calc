@@ -1,8 +1,10 @@
 ﻿using System;
 using System.IO;
 
-const int MAX_NUMBER_OF_SAME_TYPE = 3;
-const int STARTER_TYPE_WEIGHT = 2;
+int TYPE_LIMIT = 7;
+int STARTER_TYPE_WEIGHT = 2;
+int MEGA_LIMIT = 2;
+int STARTER_MEGA_WEIGHT = MEGA_LIMIT;
 
 void print_string(string str, ConsoleColor fg_color, ConsoleColor bg_color)
 {
@@ -18,7 +20,7 @@ bool mon_is_valid(Player player, string mon, MonData dex, StreamWriter logtext)
     // Check first type!
     if (player.type_counter.ContainsKey(booster_mon_types.Item1))
     {
-        if (player.type_counter[booster_mon_types.Item1] >= MAX_NUMBER_OF_SAME_TYPE)
+        if (player.type_counter[booster_mon_types.Item1] >= TYPE_LIMIT)
         {
             print_string($"\t\t\t- Type limit exceeded: {booster_mon_types.Item1}", ConsoleColor.Magenta, ConsoleColor.Black);
             logtext.WriteLine($"\t\t\t- Type limit exceeded: {booster_mon_types.Item1}");
@@ -30,7 +32,7 @@ bool mon_is_valid(Player player, string mon, MonData dex, StreamWriter logtext)
     {
         if (player.type_counter.ContainsKey(booster_mon_types.Item2))
         {
-            if (player.type_counter[booster_mon_types.Item2] >= MAX_NUMBER_OF_SAME_TYPE)
+            if (player.type_counter[booster_mon_types.Item2] >= TYPE_LIMIT)
             {
                 print_string($"\t\t\t- Type limit exceeded: {booster_mon_types.Item2}", ConsoleColor.Magenta, ConsoleColor.Black);
                 logtext.WriteLine($"\t\t\t- Type limit exceeded: {booster_mon_types.Item2}");
@@ -46,6 +48,16 @@ bool mon_is_valid(Player player, string mon, MonData dex, StreamWriter logtext)
         {
             print_string($"\t\t\t- Species clause violated: {booster_mon_species} species", ConsoleColor.Magenta, ConsoleColor.Black);
             logtext.WriteLine($"\t\t\t- Species clause violated: {booster_mon_species} species");
+            return false; // this species already owned!
+        }
+    }
+    // Check mega clause
+    if(mon.ToLower().Contains("-mega")) // Mega pokemon
+    {
+        if(player.mega_counter >= MEGA_LIMIT)
+        {
+            print_string($"\t\t\t- Mega clause violated: {mon} mega", ConsoleColor.Magenta, ConsoleColor.Black);
+            logtext.WriteLine($"\t\t\t- Mega clause violated: {mon} mega");
             return false; // this species already owned!
         }
     }
@@ -73,6 +85,38 @@ void add_mon(Player player, string mon, MonData dex, int round)
         else player.type_counter[booster_mon_types.Item2]++;
     }
     player.species_owned.Add(booster_mon_species); // Also add the species
+    if (mon.ToLower().Contains("-mega")) // Also add if mega pokemon
+    {
+        player.mega_counter++;
+    }
+}
+
+if (File.Exists("./Settings.csv"))
+{
+
+    string[] settings_file = File.ReadAllLines("./Settings.csv");
+    foreach(string setting in settings_file)
+    {
+        string[] this_setting = setting.Split(',');
+        if (this_setting[0].ToLower() == "type_limit")
+        {
+            TYPE_LIMIT = int.Parse(this_setting[1]);
+        }
+        else if(this_setting[0].ToLower() == "starter_type_weight")
+        {
+            STARTER_TYPE_WEIGHT = int.Parse(this_setting[1]);
+
+        }
+        else if (this_setting[0].ToLower() == "mega_limit")
+        {
+            MEGA_LIMIT = int.Parse(this_setting[1]);
+
+        }
+        else if (this_setting[0].ToLower() == "starter_mega_weight")
+        {
+            STARTER_MEGA_WEIGHT = int.Parse(this_setting[1]);
+        }
+    }
 }
 
 using (StreamWriter logtext = new StreamWriter("./log.txt"))
@@ -141,6 +185,10 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
             {
                 new_player.species_owned.Add(starter_species); // Also add the species
             }
+            if (starter.ToLower().Contains("-mega")) // If starter is a mega
+            {
+                new_player.mega_counter += STARTER_MEGA_WEIGHT;
+            }
             for (int i = 2; i < fields.Length; i+=2) // Add rest of data as booster packs
             {
                 if(fields[i] == "" || fields[i+1] == "")
@@ -174,7 +222,7 @@ using (StreamWriter logtext = new StreamWriter("./log.txt"))
                 List<string> pack = packs.GetPackMons(players[player].chosen_packs[players[player].ongoing_pack].Item1); // Get mons for desired booster!
                 int picks_per_pack = players[player].chosen_packs[players[player].ongoing_pack].Item2; // How many pulls of this pack
                 pack = pack.OrderBy(x => rng.Next()).ToList(); // RANDOMIZE!
-                // Now, pick the next (2), but skip if types are incompatible, and definitely skip if booster ran out
+                // Now, pick the next, but skip if types are incompatible, and definitely skip if booster ran out
                 int obtained_mons = 0; // Mons I retrieved succesfully from booster
                 
                 for (int booster_next = 0; booster_next < pack.Count; booster_next++) // Navigate the whole thing

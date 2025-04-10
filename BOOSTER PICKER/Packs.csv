@@ -1,25 +1,41 @@
-Mega1,Mega2,Tera1,Tera2,Flying,Rock,Bug,Fire,Water,Steel,Fairy,Grass,Normal,Ground,Dark,Psychic,Ghost,Electric,Ice,Poison,Fighting,Dragon,Speed,Bulk,Flex,Atk,Spatk
-Aerodactyl-Mega,Houndoom-Mega,Fezandipiti,Jolteon,Thundurus-Therian,Iron Thorns,Buzzwole,Skeledirge,Quaquaval,Ferrothorn,Hatterene,Ogerpon-Teal-Mask,Terapagos,Krookodile,Greninja,Latias,Gengar,Thundurus,Weavile,Okidogi,Infernape,Baxcalibur,Greninja,Ting-Lu,Kyurem,Kingambit,Thundurus-Therian
-Mawile-Mega,Swampert-Mega,Enamorus-Therian,Rotom-Mow,Iron Jugulis,Terrakion,Slither Wing,Heatran,Manaphy,Melmetal,Grimmsnarl,Ferrothorn,Ursaluna,Sandy Shocks,Krookodile,Reuniclus,Blacephalon,Iron Thorns,Baxcalibur,Sneasler,Sneasler,Latias,Scolipede,Ogerpon-Wellspring,Archaludon,Kartana,Volcarona
-Gallade-Mega,Kangaskhan-Mega,Brute Bonnet,Regidrago,Thundurus,Iron Boulder,Scolipede,Iron Moth,Greninja,Aegislash,Primarina,Ogerpon-Heartflame,Blissey,Mamoswine,Ting-Lu,Latios,Zoroark-Hisui,Rotom-Wash,Ninetales-Alola,Iron Moth,Kommo-o,Zygarde,Ninetales-Alola,Blissey,Manaphy,Darmanitan-Galar,Iron Moth
-Gardevoir-Mega,Sharpedo-Mega,Alakazam,Togekiss,Enamorus,Glimmora,Scizor,Volcarona,Rotom-Wash,Celesteela,Ninetales-Alola,Meowscarada,Zoroark-Hisui,Nidoking,Kingambit,Slowbro,Annihilape,Tapu Koko,Mamoswine,Nidoqueen,Terrakion,Garchomp,Meowscarada,Scizor,Iron Treads,Ogerpon-Heartflame,Rotom-Heat
-Scizor-Mega,Tyranitar-Mega,Arcanine,Kilowattrel,Hawlucha,Ogerpon-Cornerstone,Volcarona,Cinderace,Walking Wake,Iron Treads,Tapu Fini,Rillaboom,Silvally,Excadrill,Iron Jugulis,Hoopa-Unbound,Aegislash,Sandy Shocks,Darmanitan-Galar,Slowking-Galar,Iron Hands,Hydreigon,Deoxys-Speed,Corviknight,Nidoqueen,Blaziken,Tapu Lele
-Charizard-Mega-X,Garchomp-Mega,Iron Leaves,Lokix,Tornadus-Therian,Lycanroc-Dusk,,Blaziken,Urshifu-Rapid,Kingambit,Clefable,Ogerpon-Wellspring,,Nidoqueen,Zarude,Tapu Lele,Gholdengo,Raging Bolt,Kyurem,Scolipede,Buzzwole,Dragonite,Weavile,Iron Hands,Clefable,Quaquaval,Gholdengo
-Charizard-Mega-Y,Blastoise-Mega,Obstagoon,Sinistcha,Gliscor,Tyranitar,,Infernape,Dracovish,Corviknight,Tapu Koko,Tangrowth,,Ursaluna,Hoopa-Unbound,Espathra,Skeledirge,Zapdos,,Glimmora,Annihilape,Walking Wake,Latias,Ferrothorn,Garchomp,Azumarill,Iron Jugulis
-Venusaur-Mega,Altaria-Mega,Porygon2,Torterra,Salamence,,,Victini,Slowbro,Scizor,Enamorus,Kartana,,Iron Treads,Hydreigon,Slowking-Galar,,Zeraora,,Clodsire,Urshifu-Rapid,Raging Bolt,Tapu Koko,Melmetal,Salamence,Ursaluna,Heatran
-Medicham-Mega,Pinsir-Mega,Starmie,Noivern,Corviknight,,,Rotom-Heat,Ogerpon-Wellspring,Skarmory,Tapu Lele,Lilligant-Hisui,,Ting-Lu,Tyranitar,Metagross,,Iron Hands,,Gengar,Slither Wing,Roaring Moon,Infernape,Celesteela,Slowking-Galar,Dracovish,Hydreigon
-Diancie-Mega,Heracross-Mega,Mienshao,Venusaur,Celesteela,,,Ogerpon-Heartflame,Slowking,Heatran,Scream Tail,Ogerpon-Cornerstone,,Garchomp,Roaring Moon,Mew,,Thundurus-Therian,,Nidoking,Zapdos-Galar,Kommo-o,Lilligant-Hisui,Sylveon,Tangrowth,Iron Thorns,Gengar
-Alakazam-Mega,Slowbro-Mega,Tornadus,Blastoise,Zapdos-Galar,,,Blacephalon,Azumarill,Kartana,Azumarill,Zarude,,Landorus-Therian,Samurott-Hisui,Jirachi,,Rotom-Heat,,,Okidogi,Latios,Iron Boulder,Slowbro,Jirachi,Krookodile,Sandy Shocks
-Lopunny-Mega,Gyarados-Mega,Dracozolt,Swampert,Skarmory,,,,Tapu Fini,Gholdengo,Sylveon,,,Gliscor,Meowscarada,Victini,,,,,Hawlucha,Salamence,Hawlucha,Skarmory,Dragonite,Zapdos-Galar,Skeledirge
-,,,,Dragonite,,,,Samurott-Hisui,Excadrill,,,,Clodsire,Weavile,Slowking,,,,,Quaquaval,Archaludon,Zeraora,Metagross,Hoopa-Unbound,Samurott-Hisui,Glimmora
-,,,,Zapdos,,,,,Metagross,,,,Zygarde,,Azelf,,,,,Conkeldurr,Kyurem,Zoroark-Hisui,Tapu Fini,Aegislash,Slither Wing,Reuniclus
-,,,,Landorus-Therian,,,,,Archaludon,,,,Hippowdon,,Necrozma,,,,,Lilligant-Hisui,Dracovish,Roaring Moon,Okidogi,Silvally,Rillaboom,Latios
-,,,,,,,,,Jirachi,,,,,,Iron Boulder,,,,,Blaziken,,Sneasler,Clodsire,Landorus-Therian,Terrakion,Terapagos
-,,,,,,,,,,,,,,,Deoxys-Speed,,,,,,,Enamorus,Slowking,Gliscor,Zarude,Blacephalon
-,,,,,,,,,,,,,,,,,,,,,,Ogerpon-Teal-Mask,Tyranitar,Victini,Baxcalibur,Rotom-Wash
-,,,,,,,,,,,,,,,,,,,,,,Thundurus,Zygarde,Zapdos,Urshifu-Rapid,Espathra
-,,,,,,,,,,,,,,,,,,,,,,Ogerpon-Cornerstone,Buzzwole,Nidoking,Excadrill,Raging Bolt
-,,,,,,,,,,,,,,,,,,,,,,Lycanroc-Dusk,Annihilape,Kommo-o,Mamoswine,Necrozma
-,,,,,,,,,,,,,,,,,,,,,,Azelf,Hippowdon,Mew,Conkeldurr,Walking Wake
-,,,,,,,,,,,,,,,,,,,,,,Cinderace,,,,
-,,,,,,,,,,,,,,,,,,,,,,Tornadus-Therian,,,,
+Bulk,Atk,Speed,Spatk,Mixed,SwordShield,Gambler,Bargain,Hazard,Tera,WaterTotem,ElectricTotem,FireTotem,GroundTotem,RockTotem,DarkTotem,FairyTotem,Flying,Rock,Bug,Fire,Water,Steel,Fairy,Grass,Normal,Ground,Dark,Psychic,Ghost,Electric,Ice,Poison,Fighting,Dragon
+Ting-Lu,Baxcalibur,Deoxys-Speed,Meloetta,Kyurem,Melmetal,Tornadus-Therian,Cobalion,Tsareena,Iron Thorns,Walking Wake,Garchomp,Walking Wake,Latias,Ting-Lu,Grimmsnarl,Volcarona,Thundurus-Therian,Iron Thorns,Buzzwole,Skeledirge,Quaquaval,Ferrothorn,Hatterene,Ogerpon-Teal-Mask,Terapagos,Krookodile,Greninja,Latias,Gengar,Thundurus,Weavile,Okidogi,Infernape,Baxcalibur
+Zapdos,Gallade-Mega,Espathra,Walking Wake,Diancie-Mega,Iron Hands,Archaludon,Hydrapple,Iron Treads,Nidoqueen,Tapu Fini,Garchomp-Mega,Latias,Hydreigon,Metagross,Moltres-Galar,Toxapex,Iron Jugulis,Terrakion,Slither Wing,Heatran,Manaphy,Melmetal,Grimmsnarl,Ferrothorn,Ursaluna,Sandy Shocks,Krookodile,Reuniclus,Blacephalon,Iron Thorns,Baxcalibur,Sneasler,Sneasler,Latias
+Blissey,Scizor-Mega,Zeraora,Latios,Enamorus,Garchomp,Gholdengo,Rotom-Heat,Rotom-Wash,Raikou,Latias,Swampert-Mega,Tapu Fini,Cresselia,Lucario,Umbreon,Skeledirge,Thundurus,Iron Boulder,Scizor,Iron Moth,Greninja,Aegislash,Primarina,Ogerpon-Hearthflame,Blissey,Mamoswine,Ting-Lu,Latios,Zoroark-Hisui,Rotom-Wash,Ninetales-Alola,Iron Moth,Kommo-o,Zygarde
+Corviknight,Urshifu-Single,Blaziken,Ursaluna-Bloodmoon,Jirachi,Celesteela,Rillaboom,Umbreon,Excadrill,Bisharp,Ferrothorn,Landorus-Therian,Heatran,Rotom-Wash,Cobalion,Overqwil,Skarmory,Enamorus,Glimmora,Volcarona,Volcarona,Rotom-Wash,Celesteela,Ninetales-Alola,Meowscarada,Zoroark-Hisui,Nidoking,Kingambit,Slowbro,Dhelmise,Tapu Koko,Mamoswine,Nidoqueen,Terrakion,Garchomp
+Ferrothorn,Urshifu-Rapid,Lopunny-Mega,Keldeo,Dragonite,Landorus-Therian,Clefable,Donphan,Forretress,Dugtrio,Dracovish,Ursaluna,Tyranitar,Uxie,Steelix,Tyranitar,Revavroom,Hawlucha,Ogerpon-Cornerstone,Yanmega,Cinderace,Walking Wake,Iron Treads,Tapu Fini,Brute Bonnet,Silvally,Excadrill,Iron Jugulis,Hoopa-Unbound,Aegislash,Sandy Shocks,Darmanitan-Galar,Revavroom,Iron Hands,Hydreigon
+Skarmory,Ursaluna,Weavile,Tapu Lele,Victini,Reuniclus,Great Tusk,Shaymin,Samurott-Hisui,Diggersby,Gastrodon,Ursaluna-Bloodmoon,Arcanine,Rotom-Heat,Steelix-Mega,Tyranitar-Mega,Pecharunt,Salamence,Lycanroc-Dusk,Scolipede,Infernape,Urshifu-Rapid,Kingambit,Enamorus-Therian,Ogerpon-Wellspring,Lopunny-Mega,Nidoqueen,Zarude,Tapu Lele,Chandelure,Rotom-Mow,Kyurem,Scolipede,Buzzwole,Dragonite
+Slowbro,Mawile-Mega,Meowscarada,Enamorus,Nidoking,Ogerpon-Wellspring,Slowking-Galar,Kilowattrel,Kleavor,Breloom,Ogerpon-Wellspring,Zeraora,Tyranitar-Mega,Orthworm,Excadrill,Weavile,Metagross,Corviknight,Tyranitar,Heracross-Mega,Victini,Dracovish,Corviknight,Tapu Koko,Tangrowth,Ursaluna-Bloodmoon,Ursaluna,Hoopa-Unbound,Espathra,Skeledirge,Zapdos,Cloyster,Glimmora,Blaziken,Walking Wake
+Clodsire,Kartana,Greninja,Thundurus-Therian,Meloetta,Latias,Annihilape,Salazzle,Glimmora,Milotic,Rotom-Wash,Zygarde,Rotom-Wash,Celesteela,Nidoking,Samurott-Hisui,Melmetal,Celesteela,Aerodactyl-Mega,Kleavor,Rotom-Heat,Slowbro,Scizor,Enamorus,Kartana,Porygon-Z,Iron Treads,Hydreigon,Deoxys-Speed,Basculegion-Male,Zeraora,Cetitan,Clodsire,Urshifu-Rapid,Kyurem
+Tapu Fini,Arcanine-Hisui,Iron Boulder,Manaphy,Greninja,Jirachi,Scizor-Mega,Tsareena,Donphan,Muk-Alola,Venusaur-Mega,Ferrothorn,Slowbro,Zapdos,Nidoqueen,Scrafty,Magnezone,Zapdos-Galar,Tyranitar-Mega,Beedrill-Mega,Ogerpon-Hearthflame,Ogerpon-Wellspring,Skarmory,Tapu Lele,Lilligant-Hisui,Kangaskhan-Mega,Ting-Lu,Tyranitar,Metagross,Basculegion-Female,Iron Hands,Glastrier,Gengar,Slither Wing,Roaring Moon
+Slowking,Scizor,Lilligant-Hisui,Gengar,Infernape,Necrozma,Raging Bolt,Uxie,Terapagos,Munkidori,Clodsire,Swampert,Slowking,Corviknight,Clodsire,Terrakion,Jirachi,Skarmory,Aggron-Mega,Heracross,Blacephalon,Slowking,Heatran,Scream Tail,Ogerpon-Cornerstone,Obstagoon,Garchomp,Roaring Moon,Mew,Ceruledge,Thundurus-Therian,Articuno,Nidoking,Zapdos-Galar,Kommo-o
+Tangrowth,Krookodile,Aerodactyl-Mega,Blacephalon,Hoopa-Unbound,Zarude,Camerupt-Mega,Mesprit,Clodsire,Staraptor,Slowbro,Iron Treads,Toxapex,Skarmory,Quagsire,Cobalion,Iron Treads,Dragonite,Arcanine-Hisui,Pinsir-Mega,Charizard-Mega-X,Azumarill,Kartana,Azumarill,Zarude,Snorlax,Landorus-Therian,Samurott-Hisui,Jirachi,Pecharunt,Rotom-Heat,Abomasnow-Mega,Venusaur-Mega,Okidogi,Latios
+Gliscor,Zapdos-Galar,Beedrill-Mega,Volcarona,Azelf,Aegislash,Seismitoad,Flygon,Zapdos,Pelipper,Slowking,Latias,Suicune,Tapu Bulu,Swampert,Bisharp,Heatran,Zapdos,Nihilego,Araquanid,Charizard-Mega-Y,Tapu Fini,Mawile-Mega,Sylveon,Lilligant-Hisui,Staraptor,Garchomp-Mega,Meowscarada,Victini,Sableye-Mega,Pawmot,Avalugg-Hisui,Toxapex,Hawlucha,Salamence
+Sylveon,Mamoswine,Jolteon,Volcanion,Salamence,Zygarde,Sharpedo,Blastoise,Scizor,Pawmot,Tangrowth,Thundurus-Therian,Slowbro-Mega,Tangrowth,Flygon,Kingambit,Ferrothorn,Landorus-Therian,Garganacl,Ribombee,Arcanine-Hisui,Samurott-Hisui,Excadrill,Gardevoir-Mega,Venusaur-Mega,Porygon2,Clodsire,Weavile,Slowking,Sinistcha,Dracozolt,Arctovish,Nihilego,Quaquaval,Dracovish
+Skeledirge,Ogerpon-Hearthflame,Kilowattrel,Gardevoir-Mega,Necrozma,Buzzwole,Sharpedo-Mega,Electrode-Hisui,Sandy Shocks,Nihilego,Toxapex,Excadrill,Volcanion,Hydrapple,Torterra,Hydreigon,Corviknight,Charizard-Mega-Y,Kleavor,Vikavolt,Ceruledge,Swampert-Mega,Metagross,Altaria-Mega,Breloom,Diggersby,Zygarde,Tyranitar-Mega,Azelf,Mimikyu,Magnezone,Glalie-Mega,Pecharunt,Conkeldurr,
+Milotic,Quaquaval,Crobat,Charizard-Mega-Y,Kommo-o,Azumarill,Archeops,Florges,Ting-Lu,Tapu Bulu,Hydrapple,Iron Hands,Milotic,Moltres-Galar,Gastrodon,Greninja,Clodsire,Dragonite,Aerodactyl,,Darmanitan,Blastoise-Mega,Jirachi,Fezandipiti,Iron Leaves,Chansey,Hippowdon,Gyarados-Mega,Necrozma,,Xurkitree,Piloswine,,Lilligant-Hisui,
+Rotom-Wash,Iron Hands,Noivern,Chandelure,Hydreigon,Heatran,Heliolisk,Talonflame,Blastoise-Mega,Alakazam,Suicune,Mamoswine,Dondozo,Enamorus-Therian,Garchomp,Hoopa-Unbound,Celesteela,Gliscor,Rhyperior,,,Keldeo,,Togekiss,Rotom-Mow,Indeedee,Swampert-Mega,Grimmsnarl,Iron Boulder,,,Froslass,,,
+Venusaur-Mega,Kingambit,Raikou,Hatterene,Zeraora,Zapdos,Virizion,Vikavolt,Blastoise,Iron Leaves,Slowbro-Mega,Ting-Lu,Skeledirge,Mandibuzz,Krookodile,Incineroar,Aggron-Mega,,Stakataka,,,Primarina,,,,Meloetta,Gliscor,Crawdaunt,,,,,,,
+Cresselia,Terrakion,Azelf,Porygon-Z,Aegislash,Metagross,Klawf,Meloetta,Forretress,Jolteon,Volcanion,Clodsire,Rotom-Heat,Moltres,Zygarde,Zarude,Aegislash,,,,,Swampert,,,,,,Moltres-Galar,,,,,,,
+Deoxys-Defense,Darmanitan-Galar,Hawlucha,Alakazam,,Mew,Vanilluxe,Dondozo,Claydol,Rhyperior,Milotic,Hydrapple,Ceruledge,Rotom-Mow,Mudsdale,Meowscarada,,,,,,,,,,,,Obstagoon,,,,,,,
+Pecharunt,Aerodactyl-Mega,Cinderace,Blastoise-Mega,,,Vileplume,Bisharp,Swampert,Sinistcha,Dondozo,Gliscor,Arcanine,Weezing-Galar,Ursaluna,Brute Bonnet,,,,,,,,,,,,Sableye-Mega,,,,,,,
+Suicune,Weavile,,Iron Moth,,,Wyrdeer,Zygarde-10%,Mew,Torterra,Vaporeon,,Arcanine-Hisui,Wo-Chien,Ursaluna-Bloodmoon,Ting-Lu,,,,,,,,,,,,,,,,,,,
+Toxapex,Slither Wing,,Heatran,,,Lickilicky,Blastoise-Mega,Skarmory,Lokix,Zarude,,Garganacl,Gliscor,,,,,,,,,,,,,,,,,,,,,
+Mandibuzz,Iron Boulder,,Kyurem,,,Tyrantrum,Hatterene,Deoxys-Speed,Porygon2,,,Moltres,,,,,,,,,,,,,,,,,,,,,,
+,Ogerpon-Cornerstone,,Glimmora,,,Jellicent,Mandibuzz,Gliscor,Venomoth,,,,,,,,,,,,,,,,,,,,,,,,,
+,Swampert-Mega,,,,,Escavalier,Muk-Alola,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Gigalith,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Mabosstiff,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Toxicroak,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Medicham,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Palossand,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Machamp,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Garbodor,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Pangoro,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Sirfetch'd,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Ursaring,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Xatu,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Honchkrow,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Guzzlord,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Lurantis,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,Orbeetle,,,,,,,,,,,,,,,,,,,,,,,,,,,,
